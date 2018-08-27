@@ -55,6 +55,12 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Projects'
+	});
+});
+
 app.get('/bad', (req, res) => {
 	res.send({
 		errorMessage: 'Whoops! We ran into some error',
@@ -64,6 +70,6 @@ app.get('/bad', (req, res) => {
 
 //routes are set up and app.listen binds application to port
 //3000 is used for developing
-app.listen(port, () => {
-	console.log('Server is up on port', port);
+app.listen(3000, () => {
+	console.log('Server is up on port', 3000);
 });
